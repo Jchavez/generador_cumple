@@ -29,7 +29,7 @@ $to=$_GET["pemail"];
 $cc=$_GET["pcc"];
 $file=$_GET["pimage"];
 
-$message='<a href="https://ingruplatam.com"><img src="'.$Get_url.$file.'" alt="INGRUP"></a>';
+$message='<a href="http://ingruplatam.com"><img src="'.$Get_url.$file.'" alt="INGRUP"></a>';
 //echo $message;
 //$message="hola";
 
