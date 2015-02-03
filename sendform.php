@@ -29,12 +29,12 @@ $to=$_GET["pemail"];
 $cc=$_GET["pcc"];
 $file=$_GET["pimage"];
 
-$message='<a href="http://ingruplatam.com/"><img src="'.$Get_url.$file.'" alt="INGRUP"></a>';
+$message='<a href="https://ingruplatam.com"><img src="'.$Get_url.$file.'" alt="INGRUP"></a>';
 //echo $message;
 //$message="hola";
 
-if(send_mail($to, '¡FELIZ CUMPLEAÑOS! - INGRUP', $message, 'info@ingruplatam.com', 'INGRUP - Fabricamos Confianza desde 1974')){
-	if(send_mail($cc, '¡FELIZ CUMPLEAÑOS! - INGRUP', $message, 'info@ingruplatam.com', 'INGRUP - Fabricamos Confianza desde 1974')){
+if(send_mail($to, 'FELICITACIONES', $message, 'info@ingruplatam.com', 'INGRUP - Fabricamos Confianza desde 1974')){
+	if(send_mail($cc, 'FELICITACIONES', $message, 'info@ingruplatam.com', 'INGRUP - Fabricamos Confianza desde 1974')){
 		$msg=true; 
 	}else{
 		$msg=false;

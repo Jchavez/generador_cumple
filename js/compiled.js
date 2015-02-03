@@ -85,7 +85,7 @@ function sendInvitation(){
 		var gender = $('#gender').val();
 		var email = $('#email').val();
 		var cc = $('#cc').val();
-		$('#currentForm').html('<div id="response_div"><img src="/images/ajax-loader.gif" /></div>');
+		$('#currentForm').html('<div id="response_div"><img src="images/ajax-loader.gif" /></div>');
 
 
 		$.ajax({
@@ -103,7 +103,7 @@ function sendInvitation(){
 					success: function(msg){
 						if(msg){ 
 							//alert('Su mensaje ha sido enviado.');
-							messag='Su mensaje ha sido enviado. <br /> Puede descargar la imagen en:<a herf="http://grupoindustrialeec.com/cumple/'+image+'" alt="INGRUP">IMAGEN </a>';
+							messag='Su mensaje ha sido enviado. <br /> Puede descargar la imagen en: <a href="http://grupoindustrialeec.com/cumple/'+image+'" alt="INGRUP">IMAGEN </a>';
 
 							$('#currentForm').html(messag);
 							//clean();
