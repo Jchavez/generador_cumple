@@ -103,8 +103,7 @@ function sendInvitation(){
 					success: function(msg){
 						if(msg){ 
 							//alert('Su mensaje ha sido enviado.');
-							messag='Su mensaje ha sido enviado. <br /> Puede descargar la imagen en: 
-								<a herf="http://grupoindustrialeec.com/cumple/'+image+'" alt="INGRUP">IMAGEN </a>';
+							messag='Su mensaje ha sido enviado. <br /> Puede descargar la imagen en:<a herf="http://grupoindustrialeec.com/cumple/'+image+'" alt="INGRUP">IMAGEN </a>';
 
 							$('#currentForm').html(messag);
 							//clean();
