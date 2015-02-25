@@ -84,6 +84,7 @@ function sendInvitation(){
 		var name = $('#name').val();
 		var gender = $('#gender').val();
 		var email = $('#email').val();
+		var language = $('#language').val();
 		var cc = $('#cc').val();
 		$('#currentForm').html('<div id="response_div"><img src="images/ajax-loader.gif" /></div>');
 
@@ -91,7 +92,7 @@ function sendInvitation(){
 		$.ajax({
 			type: "GET", 
 			url: "generateImage.php",
-			data: 'pname='+name+'&pgender='+gender,
+			data: 'pname='+name+'&pgender='+gender+'&planguage='+language,
 			success: function(file){
 			if(file){
 

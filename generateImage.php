@@ -1,14 +1,30 @@
 <?php
-if(isset($_GET["pname"]) && isset($_GET["pgender"])){
+if( isset($_GET["pname"]) && isset($_GET["pgender"]) ){
 
 	//Set the Content Type
 	header('Content-type: image/jpeg');
 
+	$x=0;
+	$y=0;
+	$size=0;
 	// Create Image From Existing File
-	if($_GET["pgender"]=="Masculino"){
-		$jpg_image = imagecreatefromjpeg('images/man.jpg');	
-	}else{
-		$jpg_image = imagecreatefromjpeg('images/woman.jpg');
+	if(($_GET["pgender"]=="Masculino") && ($_GET["planguage"]=="Español")){
+		$jpg_image = imagecreatefromjpeg('images/hombre.jpg');
+		$x=255;
+		$y=290;
+		$size=12;	
+	}else
+	if(($_GET["pgender"]=="Femenino") && ($_GET["planguage"]=="Español")){
+		$jpg_image = imagecreatefromjpeg('images/mujer.jpg');
+		$x=255;
+		$y=290;
+		$size=12;
+	}else
+	if($_GET["planguage"]=="Ingles"){
+		$jpg_image = imagecreatefromjpeg('images/man.jpg');
+		$x=255;
+		$y=270;
+		$size=10;
 	}
 
 
@@ -22,7 +38,7 @@ if(isset($_GET["pname"]) && isset($_GET["pgender"])){
 	$text = $_GET["pname"];
 
 	// Print Text On Image
-	imagettftext($jpg_image, 12, 0, 255, 290, $blue, $font_path, $text);
+	imagettftext($jpg_image, $size, 0, $x, $y, $blue, $font_path, $text);
 
 	$hoy = date("YmdHis"); 
 	$name="image".$hoy;
